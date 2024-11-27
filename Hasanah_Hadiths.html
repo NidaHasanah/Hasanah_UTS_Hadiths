@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HASANAH</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="/web_statis/Images/paviconhasanah.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='Hasanah_Hadiths.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<body>
+    <div class="banner">
+        <video autoplay loop muted playsinline>
+            <source src="/web_statis/Images/videobackgroundhadiths.MP4" type="video/mp4">
+        </video>
+    
+        <div class="navbar">
+            <img class="logo" src="/web_statis/Images/logohasanah.png" alt="Logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars" id="menu-icon"></i>
+                <i class="fas fa-times" id="close-icon"></i>
+            </label>
+            <ul>
+                <li class="dropdown">
+                    <a href="#quotes">Quotes</a>
+                    <div class="dropdown-content">
+                        <a href="#">Best Quotes</a>
+                        <a href="#">Love Quotes</a>
+                        <a href="#">Worship Quotes</a>
+                    </div>
+                </li>
+                <li><a href="#">Hadiths</a></li>
+                <li><a href="#">Inspiring Watchlist</a></li>
+                <li><a href="#" id="nav-login-btn">Login</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    
+        <div class="content">
+            <h1>Explore Hadiths of Meaningful</h1>
+            <a class="button" href="#hadiths">Explore</a>
+        </div>
+    </div>
+
+
+    <!-- form login/register -->
+ <div class="wrapper">
+    <span class="icon-close">
+        <ion-icon name="close-outline"></ion-icon>
+    </span>
+
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </span>
+                <input type="email" required placeholder=" ">
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </span>
+                <input type="password" required placeholder=" ">
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <input type="text" required placeholder=" ">
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </span>
+                <input type="email" required placeholder=" ">
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </span>
+                <input type="password" required placeholder=" ">
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('.wrapper');
+    const navLoginBtn = document.querySelector('#nav-login-btn');
+    const iconClose = document.querySelector('.icon-close');
+    const registerLink = document.querySelector('.register-link');
+    const loginLink = document.querySelector('.login-link');
+
+    if (navLoginBtn) {
+        navLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('active-popup');
+        });
+    }
+
+    if (registerLink) {
+        registerLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('active');
+        });
+    }
+
+    if (loginLink) {
+        loginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.remove('active');
+        });
+    }
+
+    if (iconClose) {
+        iconClose.addEventListener('click', () => {
+            wrapper.classList.remove('active-popup');
+            wrapper.classList.remove('active');
+        });
+    }
+});
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <p class="teks-berjalan">
+    <marquee scrollamount="20" direction= "right">
+        <p id="marquee"><b> "Sampaikanlah dariku walau hanya satu ayat." - HR. Bukhari</b></p>
+    </marquee></p><br>
+
+    <div class="container" id="hadiths">
+        <!-- Daftar Quotes1 -->
+        <div class="quotes-container">
+            <div class="quote-card">
+                <div class="quote-content">
+                    "Barangsiapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga."
+                </div>
+                <div class="quote-source">HR. Muslim</div>
+
+                <!-- Read More Toggle -->
+                <input type="checkbox" id="read-more-checkbox-1" class="read-more-checkbox">
+                <label for="read-more-checkbox-1" class="read-more-label">Read More</label>
+
+                <!-- Penjelasan Detail -->
+                <div class="quote-details" style="text-align: justify;">
+                    Hadis ini menyatakan bahwa mencari ilmu adalah jalan yang sangat mulia. 
+                    Ilmu adalah cahaya yang dapat menerangi kehidupan, dan orang yang berusaha untuk mencari ilmu di jalan Allah akan diberikan kemudahan, 
+                    baik di dunia maupun di akhirat. Hadis ini juga mengingatkan kita tentang betapa pentingnya mencari ilmu dengan niat yang benar dan untuk mendekatkan diri kepada Allah.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Daftar Quotes2 -->
+        <div class="quotes-container">
+            <div class="quote-card">
+                <div class="quote-content">
+                    "Sesungguhnya Allah tidak melihat kepada bentuk tubuhmu dan tidak pula kepada penampilanmu, tetapi Dia melihat kepada hatimu dan amal perbuatanmu."
+                </div>
+                <div class="quote-source">HR. Muslim</div>
+    
+                <!-- Read More Toggle -->
+                <input type="checkbox" id="read-more-checkbox-2" class="read-more-checkbox">
+                <label for="read-more-checkbox-2" class="read-more-label">Read More</label>
+    
+                <!-- Penjelasan Detail -->
+                <div class="quote-details" style="text-align: justify;">
+                    Hadis ini mengingatkan kita bahwa yang paling penting dalam diri seseorang adalah niat dan amal perbuatannya, bukan penampilan luar. 
+                    Allah melihat hati yang tulus dan amal yang ikhlas. Dalam kehidupan sehari-hari, kita harus senantiasa memperbaiki niat kita dan berusaha untuk berbuat baik, 
+                    karena di sisi Allah, itulah yang paling diperhitungkan. Penampilan fisik hanyalah sementara, sedangkan hati dan amal adalah cerminan diri yang lebih abadi.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Daftar Quotes3 -->
+        <div class="quotes-container">
+            <div class="quote-card">
+                <div class="quote-content">
+                    "Sebaik-baik kalian adalah yang paling bermanfaat bagi orang lain."
+                </div>
+                <div class="quote-source">HR. Thabrani</div>
+    
+                <!-- Read More Toggle -->
+                <input type="checkbox" id="read-more-checkbox-3" class="read-more-checkbox">
+                <label for="read-more-checkbox-3" class="read-more-label">Read More</label>
+    
+                <!-- Penjelasan Detail -->
+                <div class="quote-details" style="text-align: justify;">
+                    Hadis ini mengajarkan bahwa nilai seseorang di mata Allah diukur dari seberapa bermanfaat ia bagi orang lain. 
+                    Kehidupan yang bermakna adalah kehidupan yang memberi manfaat kepada orang lain, baik dalam bentuk materi, ilmu, maupun kebaikan lainnya. 
+                    Ini mengajak kita untuk selalu berusaha menjadi pribadi yang dapat memberikan dampak positif, baik di keluarga, masyarakat, maupun lingkungan sekitar.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Daftar Quotes3 -->
+        <div class="quotes-container">
+            <div class="quote-card">
+                <div class="quote-content">
+                    "Orang yang kuat bukanlah yang pandai bergulat, tetapi orang yang dapat menahan dirinya ketika marah."
+                </div>
+                <div class="quote-source">HR. Bukhari</div>
+    
+                <!-- Read More Toggle -->
+                <input type="checkbox" id="read-more-checkbox-4" class="read-more-checkbox">
+                <label for="read-more-checkbox-4" class="read-more-label">Read More</label>
+    
+                <!-- Penjelasan Detail -->
+                <div class="quote-details" style="text-align: justify;">
+                    Hadis ini mengajarkan kita tentang pentingnya mengendalikan diri, khususnya saat marah. 
+                    Banyak orang merasa kuat karena kemampuan fisik mereka, namun kekuatan yang sejati adalah kemampuan untuk mengendalikan emosi, terutama amarah. 
+                    Mengendalikan diri adalah tanda kebijaksanaan dan kedewasaan. Ini juga merupakan cara untuk menjaga hubungan yang baik dengan orang lain dan menghindari konflik yang tidak perlu.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="about-container">
+        <img src="/web_statis/Images/logohasanah.png" class="about-image" alt="Logo">
+        <div class="about-text">
+            <h3 id="about">ABOUT US</h3>
+            <p>This website shares Islamic quotes and motivational messages, serving as a source of encouragement and inspiration. 
+                It offers positive values and energy to anyone seeking strength. 
+                Additionally, it functions as a personal reminder for its creator, 
+                bearing the name <i>HASANAH</i>, which is derived from the creator's name.</p>
+        </div>
+        <div class="about-channel">
+            <h4>Join Our Channel</h4>
+            <div class="socialIcons">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+    
+    <footer>
+    <div class="footerBottom">
+        <p>&copy;2024 Designed by <span class="designer">Nida Hasanah</span></p>
+    </div>
+    </footer>
+    
+</body>
+</html>
